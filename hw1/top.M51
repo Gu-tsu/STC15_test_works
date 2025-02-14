@@ -1,0 +1,128 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/29/2019  13:52:44  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE main.obj TO top RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  top (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?MAIN
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0005H     UNIT         ?C_INITSEG
+                    0008H     0003H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     0059H     UNIT         ?PR?MAIN?MAIN
+            CODE    00F3H     000DH     UNIT         ?PR?TIMER_0?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   top (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  top (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0092H         PUBLIC        P1M0
+  D:0091H         PUBLIC        P1M1
+  D:0090H         PUBLIC        P1
+  D:00C0H         PUBLIC        P4
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/29/2019  13:52:44  PAGE 2
+
+
+  B:00A8H.7       PUBLIC        EA
+  D:0097H         PUBLIC        CLK_DIV
+  C:009AH         PUBLIC        main
+  C:00F3H         PUBLIC        timer_0
+  D:0089H         PUBLIC        TMOD
+  D:008EH         PUBLIC        AUXR
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  B:00C0H.6       PUBLIC        led0
+  B:00C0H.7       PUBLIC        led1
+  B:0090H.6       PUBLIC        led2
+  B:0090H.7       PUBLIC        led3
+  D:0008H         PUBLIC        m
+  D:008FH         PUBLIC        AUXR2
+  -------         PROC          TIMER_0
+  C:00F3H         LINE#         18
+  C:00F5H         LINE#         20
+  C:00FDH         LINE#         21
+  -------         ENDPROC       TIMER_0
+  -------         PROC          MAIN
+  C:009AH         LINE#         22
+  C:009AH         LINE#         23
+  C:009AH         LINE#         24
+  C:009FH         LINE#         26
+  C:00A2H         LINE#         27
+  C:00A5H         LINE#         28
+  C:00A8H         LINE#         29
+  C:00ABH         LINE#         30
+  C:00AEH         LINE#         31
+  C:00B0H         LINE#         32
+  C:00B2H         LINE#         33
+  C:00B4H         LINE#         34
+  C:00B6H         LINE#         35
+  C:00B6H         LINE#         36
+  C:00B6H         LINE#         37
+  C:00C3H         LINE#         38
+  C:00C8H         LINE#         39
+  C:00DBH         LINE#         40
+  C:00DBH         LINE#         41
+  C:00DBH         LINE#         42
+  C:00DDH         LINE#         43
+  C:00DFH         LINE#         44
+  C:00E1H         LINE#         45
+  C:00E1H         LINE#         46
+  C:00E3H         LINE#         47
+  C:00E5H         LINE#         48
+  C:00E7H         LINE#         49
+  C:00E7H         LINE#         50
+  C:00E9H         LINE#         51
+  C:00EBH         LINE#         52
+  C:00EDH         LINE#         53
+  C:00EDH         LINE#         54
+  C:00EFH         LINE#         55
+  C:00F1H         LINE#         56
+  -------         ENDPROC       MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/29/2019  13:52:44  PAGE 3
+
+
+  -------         ENDMOD        MAIN
+
+Program Size: data=11.0 xdata=0 code=253
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
